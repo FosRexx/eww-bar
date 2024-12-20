@@ -1,3 +1,5 @@
+// Thank you to sleeplessval/i3-eww(https://github.com/sleeplessval/i3-eww) for the i3 IPC Bridge
+
 use std::process::{exit, Command};
 
 use i3ipc::{

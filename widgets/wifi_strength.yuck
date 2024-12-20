@@ -1,0 +1,6 @@
+; ━━━━ WiFi Strength ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+(defpoll wifi_strength_poll :interval "1m" `./modules/target/release/wifi_strength`)
+
+(defwidget wifi_strength []
+  (literal :content wifi_strength_poll)
+)

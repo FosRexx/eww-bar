@@ -1,0 +1,8 @@
+; ━━━━ tray ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+(defwidget tray []
+  (systray :orientation "horizontal"
+           :space-evenly "true"
+           :icon-size 16
+           :spacing 2
+  )
+)

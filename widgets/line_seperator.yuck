@@ -1,0 +1,6 @@
+; ━━━━ Line Seperator ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+(defwidget line_seperator []
+  (label :text "|"
+         :class "seperator"
+  )
+)

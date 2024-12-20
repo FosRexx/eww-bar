@@ -1,0 +1,6 @@
+; ━━━━ date-time ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+(defpoll datetime_poll :interval "30s" `date +"%Y-%m-%d %I:%M"`)
+
+(defwidget datetime []
+  (label :text datetime_poll)
+)

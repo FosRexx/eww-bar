@@ -1,0 +1,8 @@
+; ━━━━ Workspaces ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+(deflisten i3_workspaces_var `./modules/target/release/i3_workspaces`)
+
+;;	basic widget
+(defwidget i3_workspaces []
+	;;	workspace content block
+	(literal :content i3_workspaces_var)
+)

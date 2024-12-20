@@ -1,0 +1,12 @@
+; ━━━━ WM Mode ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;;	set I3_WM_MODE variable
+(defvar I3_WM_MODE "default")
+
+(defwidget i3_wm_mode []
+	;;	basic revealer for mode
+	(revealer
+		:reveal { I3_WM_MODE != "default" }
+		:transition "slideleft"
+		  (label :class "revealer" :text "${I3_WM_MODE}")
+	)
+)

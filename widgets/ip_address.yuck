@@ -1,0 +1,6 @@
+; ━━━━ IP Address ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+(defpoll ip_address_poll :interval "1m" `ip route | awk '/default/ {print $9}'`)
+
+(defwidget ip_address []
+  (label :style "color: #00FF00" :text ip_address_poll)
+)

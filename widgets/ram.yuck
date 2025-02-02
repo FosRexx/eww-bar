@@ -1,5 +1,5 @@
 ; ━━━━ RAM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(defpoll ram_poll :interval "1m" `./modules/target/release/ram`)
+(defpoll ram_poll :interval "1m" `../../modules/target/release/ram`)
 
 (defwidget ram []
   (literal :content ram_poll)

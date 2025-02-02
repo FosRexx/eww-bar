@@ -1,5 +1,5 @@
 ; ━━━━ Network Speed ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(deflisten network_speed_poll `./modules/target/release/network`)
+(deflisten network_speed_poll `../../modules/target/release/network`)
 
 (defwidget network_speed []
   (label :text network_speed_poll)

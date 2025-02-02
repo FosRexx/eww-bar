@@ -1,5 +1,5 @@
 ; ━━━━ battery ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(defpoll battery_poll :interval "1m" `./modules/target/release/battery`)
+(defpoll battery_poll :interval "1m" `../../modules/target/release/battery`)
 
 (defwidget battery []
   (literal :content battery_poll)

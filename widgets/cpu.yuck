@@ -1,5 +1,5 @@
 ; ━━━━ CPU ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(deflisten cpu_poll `./modules/target/release/cpu`)
+(deflisten cpu_poll `../../modules/target/release/cpu`)
 
 (defwidget cpu []
   (literal :content cpu_poll)

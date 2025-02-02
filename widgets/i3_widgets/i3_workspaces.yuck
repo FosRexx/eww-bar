@@ -1,5 +1,5 @@
 ; ━━━━ Workspaces ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(deflisten i3_workspaces_var `./modules/target/release/i3_workspaces`)
+(deflisten i3_workspaces_var `../../modules/target/release/i3_workspaces`)
 
 ;;	basic widget
 (defwidget i3_workspaces []

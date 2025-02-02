@@ -1,17 +1,17 @@
 ; Path must be relative to the eww.yuck file
-(include "./widgets/i3_widgets/i3_workspaces.yuck")
-(include "./widgets/i3_widgets/i3_wm_mode.yuck")
+(include "../../widgets/i3_widgets/i3_workspaces.yuck")
+(include "../../widgets/i3_widgets/i3_wm_mode.yuck")
 
-(include "./widgets/line_seperator.yuck")
+(include "../../widgets/line_seperator.yuck")
 
-(include "./widgets/ip_address.yuck")
-(include "./widgets/wifi_strength.yuck")
-(include "./widgets/network_speed.yuck")
-(include "./widgets/cpu.yuck")
-(include "./widgets/ram.yuck")
-(include "./widgets/battery.yuck")
-(include "./widgets/datetime.yuck")
-(include "./widgets/tray.yuck")
+(include "../../widgets/ip_address.yuck")
+(include "../../widgets/wifi_strength.yuck")
+(include "../../widgets/network_speed.yuck")
+(include "../../widgets/cpu.yuck")
+(include "../../widgets/ram.yuck")
+(include "../../widgets/battery.yuck")
+(include "../../widgets/datetime.yuck")
+(include "../../widgets/tray.yuck")
 
 ; ━━━━ i3_bars ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
 (defwidget i3_bar []

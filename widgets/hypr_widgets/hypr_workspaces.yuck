@@ -3,11 +3,17 @@
 
 ;;	basic widget
 (defwidget hypr_workspaces [monitor]
-    (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/+/\' | sed 's/down/-/'`1"
-    (box :class "workspaces"
-      (for i in {workspaces[monitor].workspaces}
+    (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/-/\' | sed 's/down/+/'`1"
+    (box :class "workspace"
+         :spacing 10
+         :space-evenly false
+         :orientation "h"
+      (for i in {hypr_workspaces_var[monitor].workspaces}
         (button
+          :vexpand true
           :onclick "hyprctl dispatch workspace ${i.id}"
           :class "${i.class}"
-          "${i.name}")))))
+          "${i.name}")))
+    )
 )
+

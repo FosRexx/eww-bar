@@ -78,11 +78,11 @@ fn get_workspace_windows(monitor: &str) -> Result<Vec<WorkspaceCustom>> {
     {
         let mut active = false;
         let on_screen = on_screen_workspaces.contains(&workspace.id);
-        let mut class = format!("workspace-button w{}{}", workspace.id, if on_screen {" workspace-on-screen"} else {""});
+        let mut class = format!("ws-btn w{}{}", workspace.id, if on_screen {" workspace-on-screen"} else {""});
         if (active_workspace_id == workspace.id)
             && (active_monitor_name == monitor || monitor == "ALL")
         {
-            class = format!("{} workspace-active wa{}", class, workspace.id);
+            class = format!("{} focused wa{}", class, workspace.id);
             active = true;
         }
 
@@ -105,7 +105,7 @@ fn get_all_advanced() -> Result<Vec<MonitorCustom>> {
         let workspaces = get_workspace_windows(&m.name)?;
         let mc: MonitorCustom = MonitorCustom {
             name: m.name,
-            workspaces: workspaces,
+            workspaces,
         };
         out_monitors.push(mc);
     }

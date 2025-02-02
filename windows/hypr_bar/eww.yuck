@@ -1,5 +1,4 @@
 ; eww config
-; (include "./widgets/i3_widgets/i3_bar.yuck")
 (include "../../widgets/hypr_widgets/hypr_bar.yuck")
 
 ; ━━━━ windows ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸

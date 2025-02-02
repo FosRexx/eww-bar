@@ -1,0 +1,12 @@
+; ━━━━ WM Mode ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;;	set hypr_WM_MODE variable
+(defvar hypr_WM_MODE "default")
+
+(defwidget hypr_wm_mode []
+	;;	basic revealer for mode
+	(revealer
+		:reveal { hypr_WM_MODE != "default" }
+		:transition "slideleft"
+		  (label :class "revealer" :text "${hypr_WM_MODE}")
+	)
+)

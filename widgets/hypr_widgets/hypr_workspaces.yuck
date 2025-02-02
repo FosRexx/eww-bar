@@ -1,0 +1,13 @@
+; ━━━━ Workspaces ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+(deflisten hypr_workspaces_var `../../modules/target/release/hypr_workspaces _`)
+
+;;	basic widget
+(defwidget hypr_workspaces [monitor]
+    (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/+/\' | sed 's/down/-/'`1"
+    (box :class "workspaces"
+      (for i in {workspaces[monitor].workspaces}
+        (button
+          :onclick "hyprctl dispatch workspace ${i.id}"
+          :class "${i.class}"
+          "${i.name}")))))
+)

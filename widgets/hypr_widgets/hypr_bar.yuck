@@ -1,0 +1,45 @@
+; Path must be relative to the eww.yuck file
+(include "../../widgets/hypr_widgets/hypr_workspaces.yuck")
+(include "../../widgets/hypr_widgets/hypr_wm_mode.yuck")
+
+(include "../../widgets/line_seperator.yuck")
+
+(include "../../widgets/ip_address.yuck")
+(include "../../widgets/wifi_strength.yuck")
+(include "../../widgets/network_speed.yuck")
+(include "../../widgets/cpu.yuck")
+(include "../../widgets/ram.yuck")
+(include "../../widgets/battery.yuck")
+(include "../../widgets/datetime.yuck")
+(include "../../widgets/tray.yuck")
+
+; ━━━━ hypr_bars ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+(defwidget hypr_bar []
+  (box :orientation "horizontal"
+       :space-evenly true ; To align latter boxes to the sides
+    (box :halign "start"
+         :space-evenly false
+         :spacing 15
+      (hypr_workspaces :monitor 0)
+      (hypr_wm_mode)
+    )
+    (box :halign "end"
+         :space-evenly false
+         :spacing 5
+      (ip_address)
+      (line_seperator)
+      (wifi_strength)
+      (line_seperator)
+      (network_speed)
+      (line_seperator)
+      (cpu)
+      (line_seperator)
+      (ram)
+      (line_seperator)
+      (battery)
+      (line_seperator)
+      (datetime)
+      (tray)
+    )
+  )
+)

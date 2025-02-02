@@ -5,5 +5,10 @@ edition = "2021"
 
 [dependencies]
 battery = "0.7.8"
+hyprland = { version = "0.4.0-beta.2" }
+flexi_logger = "0.29.8"
 i3ipc = "0.10.1"
+log = "0.4.25"
+serde = "1.0.217"
+serde_json = "1.0.138"
 sysinfo = "0.32.0"

@@ -47,8 +47,13 @@ pub fn build_widget(connection: &mut I3Connection) {
 ///	i3 mode change.
 pub fn set_mode(e: ModeEventInfo) {
     let mut cmd = Command::new("eww");
+
+    let home_dir = std::env::var("HOME").expect("Failed to get HOME directory");
+    let config_path = format!("{}/.config/eww/windows/i3_bar", home_dir);
+
     let mode_str = String::from("I3_WM_MODE=") + &e.change;
-    cmd.args(["update", &mode_str]);
+
+    cmd.args(["--config", &config_path, "update", &mode_str]);
     cmd.output().ok();
 }
 

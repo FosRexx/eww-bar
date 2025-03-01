@@ -3,7 +3,7 @@
 
 ;;	basic widget
 (defwidget hypr_workspaces [monitor]
-    (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/-/\' | sed 's/down/+/'`1"
+    (eventbox :onscroll "hyprctl dispatch workspace e`echo {} | sed 's/up/-/\' | sed 's/down/+/'`1"
     (box :class "workspace"
          :spacing 10
          :space-evenly false

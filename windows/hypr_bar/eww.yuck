@@ -9,13 +9,7 @@
                                    :y "0"
                                    :width "100%"
                                    :anchor "bottom center")
-               :stacking "fg"
-               :wm-ignore false
-               ; :reserve (struts :distance "10px" :side "top")
-               :windowtype "dock"
-
+               :stacking "bottom"
                :exclusive true
-               :focusable false
-               :namespace "status_bar"
   (hypr_bar)
 )

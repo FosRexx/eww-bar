@@ -13,10 +13,6 @@
                :wm-ignore false
                ; :reserve (struts :distance "10px" :side "top")
                :windowtype "dock"
-
-               :exclusive true
-               :focusable false
-               :namespace "status_bar"
   (i3_bar)
 )
 

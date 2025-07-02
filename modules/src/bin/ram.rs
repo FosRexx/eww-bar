@@ -2,7 +2,7 @@ use sysinfo::{MemoryRefreshKind, RefreshKind, System};
 
 fn main() {
     let sys = System::new_with_specifics(
-        RefreshKind::new().with_memory(MemoryRefreshKind::new().with_ram()),
+        RefreshKind::nothing().with_memory(MemoryRefreshKind::nothing().with_ram()),
     );
 
     let icon: &str = "";

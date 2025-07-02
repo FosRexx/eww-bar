@@ -31,7 +31,7 @@ fn main() {
         // Sleep until the next poll
         thread::sleep(POLL_INTERVAL);
         // Refresh network data
-        networks.refresh();
+        networks.refresh(true);
 
         let mut total_received: f64 = 0.0;
         let mut total_transmitted: f64 = 0.0;

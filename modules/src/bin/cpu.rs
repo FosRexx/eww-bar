@@ -4,7 +4,7 @@ use sysinfo::{CpuRefreshKind, RefreshKind, System};
 
 fn main() {
     let mut sys = System::new_with_specifics(
-        RefreshKind::new().with_cpu(CpuRefreshKind::new().with_cpu_usage()),
+        RefreshKind::nothing().with_cpu(CpuRefreshKind::nothing().with_cpu_usage()),
     );
     let icon: &str = "󰻠";
 
